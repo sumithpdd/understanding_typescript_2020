@@ -52,3 +52,5 @@ function isOlder(user: User, checkAge: number) {
   return checkAge > user.age;
 }
 ```
+
+Official TypeScript Docs: <https://www.typescriptlang.org/docs/handbook/basic-types.html>
