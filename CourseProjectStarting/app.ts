@@ -1,20 +1,54 @@
-function add(n1 : number, n2 :number, printResult : boolean,resultPhrase: String) { 
-    
-    // in javascript this is how we can handle incorrect type sent to the parameter
-    if(typeof n1 !=='number' || typeof n2 !=='number')
-    {
-        throw new Error("Incorrect input!");        
-    }
-    const result = n1+n2;
-    if(printResult){
-        console.log(resultPhrase + result.toString());
-    }
+// this is somthing we can do, but it better for typescript to infer types
+enum Role{ADMIN,READ_ONLY,AUTHOR};
+// const person:{
+//     name:string;
+//     age: number;
+//     hobbies:string[];
+//     role:[number,string];
+// } 
+const person ={
+    name:"Sumith",
+    age:42,
+    hobbies:['Sports','Cooking'],
+    role: Role.AUTHOR
+    // role:[2,'author']
 
-    return result;
+};
+// person.role.push('admin');
+
+let favoriteActivities :string[];
+favoriteActivities=['Sprots'];
+
+console.log(person.name);
+for(const hobby of person.hobbies){
+    console.log(hobby.toUpperCase());
 }
-const number1 = 5;
-const number2=2.8;
-const printResult = true;
-const resultPhrase ='Result is: ';
+if(person.role===Role.AUTHOR)
+{
+    console.log('is Author');
+}
+// Of course object types can also be created for nested objects.
 
-  add(number1,number2,printResult, resultPhrase); 
+// Let's say you have this JavaScript object:
+
+const product = {
+  id: 'abc1',
+  price: 12.99,
+  tags: ['great-offer', 'hot-and-new'],
+  details: {
+    title: 'Red Carpet',
+    description: 'A great carpet - almost brand-new!'
+  }
+}
+// This would be the type of such an object:
+
+// {
+//   id: string;
+//   price: number;
+//   tags: string[],
+//   details: {
+//     title: string;
+//     description: string;
+//   }
+// }
+// So you have an object type in an object type so to say.
