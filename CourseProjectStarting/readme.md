@@ -54,3 +54,19 @@ function isOlder(user: User, checkAge: number) {
 ```
 
 Official TypeScript Docs: <https://www.typescriptlang.org/docs/handbook/basic-types.html>
+
+## Watch more
+
+``` tsc app.ts -w ```
+
+## To compile whole project
+
+``` tsc --init ```
+
+## These links might also be interesting
+
+tsconfig Docs: <https://www.typescriptlang.org/docs/handbook/tsconfig-json.html>
+
+Compiler Config Docs: <https://www.typescriptlang.org/docs/handbook/compiler-options.html>
+
+VS Code TS Debugging: <https://code.visualstudio.com/docs/typescript/typescript-debugging>

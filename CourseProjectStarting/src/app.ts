@@ -5,7 +5,7 @@ userInput=5;
 userInput ='Max';
 
 if(typeof userInput==='string'){
-    userName=userName;
+    userName=userInput;
 }
 
 function generateError(message:string,code:number):never{
